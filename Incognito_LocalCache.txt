@@ -1,0 +1,13 @@
+Webブラウザのシークレットモードやプライベートモードでローカルストレージに保存されたゲームデータ等を引き継ぐ方法
+
+F12キーのコンソールで
+console.log(localStorage);
+と打ち、表示されたJSON形式を
+a=ここに張り付け;Object.keys(a).forEach(function(b){localStorage.setItem(b, a[b]);});
+
+引用元: https://twitter.com/s_kawamoto/status/1419423871103602688
+
+注意点:
+・シークレットモードでないウィンドウのコンソールで行うこと。
+・localStorageを確認してうまく登録されていないときは、キーを一つずつ登録するとよい。
+  LocalStorage.setItem("キー名","値の文字列");
