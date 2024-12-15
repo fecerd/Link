@@ -1,0 +1,2 @@
+リンクオプションでエントリポイントをmainCRTStartupに変更する。
+mingw (msys2)のgccを使っている場合は-mwindowsオプションを指定する。
